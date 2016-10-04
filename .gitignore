@@ -1,0 +1,4 @@
+node_modules
+dist
+app/css/sprite.css
+app/img/sprite

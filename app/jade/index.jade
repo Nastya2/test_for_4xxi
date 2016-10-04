@@ -1,0 +1,174 @@
+doctype html
+
+html
+    head
+        meta(http-equiv = 'Content-Type', charset='utf-8')
+        meta(http-equiv='X-UA-Compatible', content="IE=edge,chrome=1")
+        meta(name='viewport' content='width=device-width, initial-scale=1')
+        title 4xxi
+        link(rel='stylesheet'  href='css/normalize.css')
+        link(rel='stylesheet'  href='css/font.css')
+        link(rel='stylesheet'  href='css/main.css' )
+        
+        
+    body
+        .wrapper
+            .header.main-header
+                .container.clearfix
+                    a(href="index.html" class="logo")
+                        img(src="img/logo@3x.png" class="logo__img" alt="centrallo")
+                    .text-signIn
+                        a(href="#").text-signIn__link SIGN UP FOR  FREE
+                        |  — START PUBLISHING IN MINUTES
+                    .accountMenu
+                        a(href="#").accountMenu__enter LOG IN
+            .social-information.container.clearfix
+                .alias
+                    img(src="img/ava@2x.png" alt="avatar" class="alias__avatar")
+                    span.alias__name Konstantin Vladimirskiy
+                 - var icons = ['fb', 'tw','vk','in']
+                .social-information__right
+                    ul.socials
+                        each icon in icons
+                            li(class="socials__item")
+                                a(href="#" class="socials__link socials__link_" + icon)
+                                    .socials__icon
+                    .its-link
+                        a(href="#" class="its-link__link")  http://cll.io/a6lnu
+            .breadcrumbs.container.clearfix
+                .title Post-release checklist 2015.02.26
+                button(type="button").addCentrallo Add to my Centrallo
+            .box.container
+                .angle
+                ul.list-notes
+                    - var items = ["Referral Accepted and Invited invitations not sorted by A-Z","Inbox shows me 242 items - that includes Done items; Only show me active","Inbox defaults to show done items - it should not","Lists default to Show Done - they should not","Recent view should sort by Created and show no Done items"]
+                        each item in items
+                            li.list-notes__item
+                                label.list-notes__label
+                                    input(name="location" type="checkbox").list-notes__input
+                                    span.list-notes__elem
+                                    span.list-notes__text= item
+                .crumbs.clearfix
+                    .time-ago 2h ago
+                    ul.share
+                        li.share__item
+                            a(href="#").share__link
+                                img(src="img/share.png").share__img
+                        li.share__item
+                            a(href="#").share__link
+                                img(src="img/url.png").share__img
+             .box.container
+                ul.news
+                    li.news__item
+                        a(href="#").news__link
+                            span.news__icon
+                            span.news__text Children
+                        ul.news__data
+                            li.news__data-item 12 items
+                            li.news__data-item 7h ago
+                    li.news__item
+                        a(href="#").news__link
+                            span.news__icon
+                            span.news__text The longest title in the world
+                        ul.news__data
+                            li.news__data-item 3 items
+                            li.news__data-item Mar 13
+                .crumbs.clearfix
+                    .time-ago 2h ago
+                    ul.share
+                        li.share__item
+                            a(href="#").share__link
+                                img(src="img/share.png").share__img
+                        li.share__item
+                            a(href="#").share__link
+                                img(src="img/url.png").share__img    
+              .box.container
+                ul.media
+                    - var media = ['img/video.png','img/photo-1.png','img/photo-2.png']
+                    each item, index in media
+                        li(class="media__item")
+                            a(href="#").media__link
+                                img(src=media[index]).media__resource
+                                span(class="media__icon" + ((media[index] == "img/video.png") ? " media__resource-play" : ""))
+                .calendar
+                    img(src="img/calendar.svg" scr="calendar").calendar__img
+                    span.calendar__data Due on Feb 13, 12:42 PM
+                .crumbs.clearfix
+                    .time-ago Feb 14
+                    ul.share
+                        li.share__item
+                            a(href="#").share__link
+                                img(src="img/share.png").share__img
+                        li.share__item
+                            a(href="#").share__link
+                                img(src="img/url.png").share__img         
+            .box.container
+                .description
+                     .description__text
+                        | The Dark Knight Rises is a 2012 British-American superhero film directed by Christopher Nolan, who co-wrote the screenplay with his brother Jonathan Nolan, and the story with David S. Goyer. Featuring the DC Comics character Batman, the film is the final installment in Nolan's Batman film trilogy, and the sequel to Batman Begins (2005) and The Dark Knight (2008). Christian Bale reprises the lead role of Bruce Wayne/Batman, with a returning cast of allies: Michael Caine as Alfred Pennyworth, Gary Oldman as James Gordon, and Morgan Freeman as Lucius Fox. The film introduces Selina Kyle (Anne Hathaway), a sly, morally ambiguous cat burglar, and Bane (Tom Hardy), a revolutionary bent on destroying Gotham City who forces an older Bruce Wayne to come out of retirement and become Batman again.
+                     ul.description__photo
+                        - var photo = ['img/photo-3.png','img/photo-4.png','img/photo-5.png','img/photo-6.png']
+                        each item, index in photo
+                            li(class="description__photo-item")
+                                img(src=photo[index]).description__photo-img
+                 .contact-info.clearfix
+                    .map
+                        img(src="img/map.png" alt="map").map__img
+                    .adress
+                        .adress__title Merry Bergtraum High School for Business Cariers
+                        .adress__data
+                            span.adress__data-part 411 Pearl St, NY 10038
+                            span.adress__data-part United States of America
+                        a(href="#").adress__onMap Watch location on Google Maps
+                section.dowload
+                   ul.download-file
+                    - var filePicture = ['img/db.png','img/skydrive.png','img/attach-doc.png']
+                    - var fileName = ['logo_final.eps','photos_summer.zip','work_…hard.doc']
+                        each item, index in fileName
+                            li(class="download-file-item")
+                                a(href="#" download).download-file__link
+                                    span.download-file__picture
+                                        img(src= filePicture[index]).download-file__img
+                                    span.download-file__name= fileName[index]
+                   .crumbs.clearfix
+                    .time-ago Jan 12
+                    ul.share
+                        li.share__item
+                            a(href="#").share__link
+                                img(src="img/share.png").share__img
+                        li.share__item
+                            a(href="#").share__link
+                                img(src="img/url.png").share__img  
+            .box.container.clearfix
+                .angle.angle_protected
+                .time-ago Nov 22
+                .property Protected
+            .box.container.clearfix.box_opacity
+                .angle.angle_archived
+                .time-ago Nov 21
+                .property.property_color-grey Archived
+
+        footer.footer
+            .container
+                .footer-content
+                    .footer_text © CENTRALLO 2015
+                    ul.footer-menu
+                        - var footerLink = ['PRIVACY','TERMS','CONTACT']
+                            each item in footerLink
+                                li.footer-menu__item
+                                    a(href="#" class="footer-menu__link")= item
+                    ul.footer-social
+                         - var footerSocial = ["tw-footer","fb-footer"]
+                             each item in footerSocial
+                                li.footer-social__item
+                                    a(href="#" class="footer__social-link footer-social__link_" + item)
+                                        .footer-social__icon
+
+                   
+                   
+                   
+                   
+                   
+                   
+            
+            

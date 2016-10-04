@@ -1,0 +1,27 @@
+@font-face {
+    font-family: 'Helvetica-Regular';
+    src: url('../font/Helvetica-Regular.eot');
+    src: url('../font/Helvetica-Regular.eot?#iefix') format('embedded-opentype'),
+         url('../font/Helvetica-Regular.woff2') format('woff2'),
+         url('../font/Helvetica-Regular.woff') format('woff'),
+         url('../font/Helvetica-Regular.ttf') format('truetype'),
+         url('../font/Helvetica-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'helveticaneuemedium';
+    src: url('../font/helveticaneue-medium-webfont.eot');
+    src: url('../font/helveticaneue-medium-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../font/helveticaneue-medium-webfont.woff2') format('woff2'),
+         url('../font/helveticaneue-medium-webfont.woff') format('woff'),
+         url('../font/helveticaneue-medium-webfont.ttf') format('truetype'),
+         url('../font/helveticaneue-medium-webfont.svg#helveticaneuemedium') format('svg');
+    font-weight: 500;
+    font-style: normal;
+
+}
+
+
