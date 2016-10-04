@@ -107,7 +107,11 @@ p {
   display: block;
 }
 
-/* ------------------ social-information --------------------- */
+.registrationMenu {
+  display: none;
+}
+
+/* ------------------ social-information ---------- */
 
 .social-information {
   margin-bottom: 25px;
@@ -206,7 +210,11 @@ p {
   font-size: 20px;
 }
 
-button {
+.title {
+  display: none;
+}
+
+.addCentrallo {
   float: right;
   display: block;
   border-radius: 3px;
@@ -216,6 +224,10 @@ button {
   border: none;
   outline: none;
   cursor: pointer;
+}
+
+.share-button {
+  display: none;
 }
 
 /* ------------------ box1 --------------------- */
@@ -386,30 +398,55 @@ button {
 
 .news__data {
   float: right;
+  width: 160px;
 }
 
 .news__data-item {
-  display: inline-block;
-  vertical-align: top;
   color: #858585;
   font-size: 16px;
-  margin-right: 50px;
 }
 
-.news__data-item:last-child {
-  margin-right: 0;
+.news__data-nubmer {
+  float: left;
+}
+
+.news__data-time {
+  float: right;
 }
 
 /* ------------------ box3 --------------------- */
 
-.media__item {
+.media__link {
   display: inline-block;
   margin-left: 13px;
   position: relative;
+  margin-bottom: 10px;
 }
 
-.media__item:first-child {
+.media__link:first-child {
   margin-left: 0;
+}
+
+.media__resource-play {
+  width: 60px;
+  height: 60px;
+  background: #00aeff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -30px;
+  margin-top: -30px;
+  opacity: 0.9;
+  border-radius: 50%;
+}
+
+.media__resource-play::after {
+  position: absolute;
+  content: "";
+  border: 11px solid transparent;
+  border-left: 16px solid #fff;
+  top: 21px;
+  left: 24px;
 }
 
 .media {
@@ -435,32 +472,6 @@ button {
   color: #858585;
 }
 
-.media__resources {
-  display: block;
-}
-
-.media__resource-play {
-  width: 60px;
-  height: 60px;
-  background: #00aeff;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  margin-left: -30px;
-  margin-top: -30px;
-  opacity: 0.9;
-  border-radius: 50%;
-}
-
-.media__resource-play::after {
-  position: absolute;
-  content: "";
-  border: 11px solid transparent;
-  border-left: 16px solid #fff;
-  top: 21px;
-  left: 24px;
-}
-
 /* ------------------ box4 --------------------- */
 
 .description__text {
@@ -480,6 +491,7 @@ button {
   display: inline-block;
   vertical-align: top;
   margin-right: 12px;
+  margin-top: 12px;
 }
 
 .description__photo-item:last-child {
@@ -508,7 +520,7 @@ button {
 }
 
 .adress {
-  width: 374px;
+  width: 38.5%;
   float: left;
 }
 
@@ -678,11 +690,242 @@ button {
   height: 20px;
 }
 
+/* ------------------ adaptive768 ----------------- */ 
 
+@media screen and (min-width: 768px) and (max-width: 959px) {
+  .container {
+    width: 720px;
+  }
+    
+  .logo {
+    width: 109px;
+    margin-right: 79px;
+  }
+    
+  .text-signIn {
+    margin-top: 7px;
+  }
+    
+  .accountMenu {
+    margin-top: 7px;
+  }
+    
+  .media__link-1 {
+    width: 213.4px;
+  }
 
+  .media__link-2 {
+    width: 205.7px;
+  }
 
+  .media__link-3 {
+    width: 180px;
+  }
+    
+  .box_protected {
+    display: none;
+  }
+    
+  .box_archived {
+    display: none;
+  }
+    
+  .footer_text {
+    margin-right: 154px;      
+  }
+}
 
+/* ------------------ adaptive320 ----------------- */ 
 
+@media screen and (max-width: 767px) {
+  .container {
+    width: 296px;
+  }
+  
+  .main-header {
+    padding-top: 7px;
+    padding-bottom: 12px;
+  }
+    
+  .logo {
+    width: 108px;
+    height: 29px;
+    margin-right: 63px;
+  }
+ 
+  .text-signIn {
+    display: none;
+  }
+  
+  .registrationMenu {
+    display: block;
+    float: left;
+    padding-top: 9px;
+    padding-bottom: 4px;
+  }
+   
+  .registrationMenu__link {
+    display: block;
+    text-decoration: none;
+    color: #37b7ec;
+    font-size: 13px;
+  }
+    
+  .accountMenu {
+    padding-top: 9px;
+    padding-bottom: 5px;
+    margin-top: 0;
+  }
+    
+  .title-320 {
+    display: block;
+    font-size: 18px;
+    margin-top: 20px;
+  }
+    
+  .social-information__right {
+    display: none;
+  }
+    
+  .addCentrallo {
+    padding-right: 12px;
+    padding-left: 11px;
+    width: 140px;
+    float: left;
+  }
+ 
+  .share-button {
+    float: right;
+    display: block;
+    border-radius: 3px;
+    background-color: #fff;
+    color: #3c434a;
+    padding: 8px 16px 9px 41px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    width: 140px;
+    position: relative;
+  }
+ 
+  .share-button::after {
+    position: absolute;
+    content: "";
+    background-image: url(../img/share.png);
+    width: 16px;
+    height: 16px;
+    left: 41px;
+  }
+
+  .box {
+    padding: 13px 16px 30px;    
+  }
+    
+  .list-notes__elem {
+    margin-right: 7px;
+  }
+
+  .list-notes__text {
+    width: 240px;
+    vertical-align: top;
+  }
+   
+  .news__data {
+    float: none;
+    width: 100%;
+  }
+    
+  .news__link {
+    display: block;
+    margin-bottom: 8px;
+  }
+  
+  .news__data-nubmer {
+    float: right;
+  }
+    
+  .news__data-time {
+    float: left;
+    margin-left: 35px;
+  }
+    
+  .news__item {
+    border-bottom: none;
+    padding-top: 0;
+  }
+    
+  .news__text {
+    font-family: 'helveticaneuemedium';     
+  }
+ 
+  .media__link {
+    width: 264px;
+    display: block;
+    margin-left: 0;
+    margin-bottom: 6px;
+  }
+
+  .media__resource {
+    width: 100%;    
+  }
+    
+  .description__photo-item {
+    margin-right: 0;
+  }
+  
+  .description__photo-item-1 {
+    width: 180px;
+    margin-right: 6px;
+  }
+    
+  .description__photo-item-2 {
+    width: 77px;     
+  }
+    
+  .description__photo-item-3 {
+    width: 264px;     
+  }
+    
+  .description__photo-item-4 {
+    width: 264px;     
+  }
+    
+  .description__photo-img {
+    width: 100%;   
+  }
+    
+  .map {
+    float: none;
+    width: 100%;
+    margin-bottom: 12px;
+  }
+    
+  .adress {
+    float: none;
+    width: 100%;
+  }
+    
+  .download-file-item {
+    margin-right: 0;
+    margin-bottom: 29px;
+  }
+    
+  .box_protected {
+    display: none;
+  }
+
+  .box_archived {
+    display: none;
+  }
+    
+  .footer_text {
+    display: none;
+  }
+    
+  .footer-social {
+    margin-top: -6px;
+  }
+}
 
 
 

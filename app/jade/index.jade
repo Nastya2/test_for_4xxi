@@ -20,6 +20,8 @@ html
                     .text-signIn
                         a(href="#").text-signIn__link SIGN UP FOR  FREE
                         |  — START PUBLISHING IN MINUTES
+                    .registrationMenu
+                        a(href="#").registrationMenu__link SIGN UP
                     .accountMenu
                         a(href="#").accountMenu__enter LOG IN
             .social-information.container.clearfix
@@ -38,6 +40,8 @@ html
             .breadcrumbs.container.clearfix
                 .title Post-release checklist 2015.02.26
                 button(type="button").addCentrallo Add to my Centrallo
+                button(type="button").share-button Share
+                .title.title-320 Post-release checklist 2015.02.26
             .box.container
                 .angle
                 ul.list-notes
@@ -63,16 +67,16 @@ html
                         a(href="#").news__link
                             span.news__icon
                             span.news__text Children
-                        ul.news__data
-                            li.news__data-item 12 items
-                            li.news__data-item 7h ago
-                    li.news__item
+                        ul.news__data.clearfix
+                            li.news__data-item.news__data-nubmer 12 items
+                            li.news__data-item.news__data-time 7h ago
+                    li.news__item.clearfix
                         a(href="#").news__link
                             span.news__icon
                             span.news__text The longest title in the world
                         ul.news__data
-                            li.news__data-item 3 items
-                            li.news__data-item Mar 13
+                            li.news__data-item.news__data-nubmer 3 items
+                            li.news__data-item.news__data-time Mar 13
                 .crumbs.clearfix
                     .time-ago 2h ago
                     ul.share
@@ -83,13 +87,15 @@ html
                             a(href="#").share__link
                                 img(src="img/url.png").share__img    
               .box.container
-                ul.media
-                    - var media = ['img/video.png','img/photo-1.png','img/photo-2.png']
-                    each item, index in media
-                        li(class="media__item")
-                            a(href="#").media__link
-                                img(src=media[index]).media__resource
-                                span(class="media__icon" + ((media[index] == "img/video.png") ? " media__resource-play" : ""))
+                .media
+                    a(href="#").media__link-1.media__link
+                        img(src='img/video.png' class="media__resource")
+                        span(class="media__icon media__resource-play")
+                    a(href="#").media__link-2.media__link
+                        img(src='img/photo-1.png' class="media__resource")
+                    a(href="#").media__link-3.media__link
+                        img(src='img/photo-2.png' class="media__resource")
+                       
                 .calendar
                     img(src="img/calendar.svg" scr="calendar").calendar__img
                     span.calendar__data Due on Feb 13, 12:42 PM
@@ -108,8 +114,9 @@ html
                         | The Dark Knight Rises is a 2012 British-American superhero film directed by Christopher Nolan, who co-wrote the screenplay with his brother Jonathan Nolan, and the story with David S. Goyer. Featuring the DC Comics character Batman, the film is the final installment in Nolan's Batman film trilogy, and the sequel to Batman Begins (2005) and The Dark Knight (2008). Christian Bale reprises the lead role of Bruce Wayne/Batman, with a returning cast of allies: Michael Caine as Alfred Pennyworth, Gary Oldman as James Gordon, and Morgan Freeman as Lucius Fox. The film introduces Selina Kyle (Anne Hathaway), a sly, morally ambiguous cat burglar, and Bane (Tom Hardy), a revolutionary bent on destroying Gotham City who forces an older Bruce Wayne to come out of retirement and become Batman again.
                      ul.description__photo
                         - var photo = ['img/photo-3.png','img/photo-4.png','img/photo-5.png','img/photo-6.png']
-                        each item, index in photo
-                            li(class="description__photo-item")
+                        - var photo_num = ['1','2','3','4']
+                        each item, index in photo_num
+                            li(class="description__photo-item description__photo-item-" + item)
                                 img(src=photo[index]).description__photo-img
                  .contact-info.clearfix
                     .map
@@ -139,11 +146,11 @@ html
                         li.share__item
                             a(href="#").share__link
                                 img(src="img/url.png").share__img  
-            .box.container.clearfix
+            .box.box_protected.container.clearfix
                 .angle.angle_protected
                 .time-ago Nov 22
                 .property Protected
-            .box.container.clearfix.box_opacity
+            .box.box_archived.container.clearfix.box_opacity
                 .angle.angle_archived
                 .time-ago Nov 21
                 .property.property_color-grey Archived
