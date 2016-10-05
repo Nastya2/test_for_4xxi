@@ -64,6 +64,94 @@ p {
 
 /* ------------------ header --------------------- */
 
+.download {
+  background: #37b7ec;
+  padding-top: 9px;
+  padding-bottom: 8px;
+  display: none;
+    
+  &.top__text-320 {
+    display: none;
+  }
+}
+
+.downloadInfo {
+  float: left;
+  font-size: 0;
+}
+
+.logo-headerTop {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 7px;
+}
+
+.headerTop__text {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.top__text-name {
+  font-size: 14px;
+  color: #fff;
+  display: block;
+}
+
+.top__text-download {
+  font-size: 12px;
+  color: #fff;
+}
+
+.clickElem {
+  float: right;
+}
+
+.download-button {
+  display: inline-block;
+  vertical-align: middle;
+  border-radius: 3px;
+  background: #fff;
+  text-decoration: none;
+  color: #00adff;
+  padding: 6px 25px 7px 26px;
+  width: 110px;
+}
+
+.close-download {
+  border: none;
+  outline: none;
+  font-size: 0;
+  width: 14px;
+  height: 14px;
+  background: transparent;
+  cursor: pointer;
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 30px;
+  position: relative;
+
+  &::after,
+  &::before {
+    position: absolute;
+    content: "";
+    width: 14px;
+    height: 1px;
+    background: #fff;
+    top: 4px;
+    left: 0;
+  }
+}
+
+.close-download::before {
+  transform: rotate(45deg);
+}
+
+.close-download::after {
+  transform: rotate(-45deg);
+}
+
+/* ---------------------- */
+
 .main-header {
   background: #3c434a;
   padding-top: 9px;
@@ -693,6 +781,11 @@ p {
 /* ------------------ adaptive768 ----------------- */ 
 
 @media screen and (min-width: 768px) and (max-width: 959px) {
+  .download {
+    display: block;
+  }
+   
+  
   .container {
     width: 720px;
   }
@@ -742,6 +835,33 @@ p {
     width: 296px;
   }
   
+  .download {
+    display: block;
+
+    .top__text-download {
+      display: none;
+    }
+
+    .top__text-320 {
+      display: block;
+      font-size: 11px;
+      color: #fff;
+    }
+      
+    .close-download {
+      margin-left: 16px;     
+    }
+      
+    .download-button {
+      padding: 7px 17px 7px 18px;
+      width: 90px;
+    }
+      
+    .clickElem {
+      padding-top: 3px;     
+    }
+  }
+    
   .main-header {
     padding-top: 7px;
     padding-bottom: 12px;

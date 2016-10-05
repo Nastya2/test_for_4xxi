@@ -13,6 +13,18 @@ html
         
     body
         .wrapper
+            section.download
+                .container.clearfix
+                    .downloadInfo
+                        .logo-headerTop
+                            img(src="img/icon.svg" alt="centrallo").logo__img
+                        .headerTop__text
+                            span.top__text-name  Centrallo
+                            span.top__text-download Download it for free on the App Store
+                            span.top__text-320 Free on the Google Play
+                    .clickElem
+                        a(href="#" download).download-button Download
+                        button(type="button" title="закрыть").close-download
             .header.main-header
                 .container.clearfix
                     a(href="index.html" class="logo")
@@ -111,7 +123,8 @@ html
             .box.container
                 .description
                      .description__text
-                        | The Dark Knight Rises is a 2012 British-American superhero film directed by Christopher Nolan, who co-wrote the screenplay with his brother Jonathan Nolan, and the story with David S. Goyer. Featuring the DC Comics character Batman, the film is the final installment in Nolan's Batman film trilogy, and the sequel to Batman Begins (2005) and The Dark Knight (2008). Christian Bale reprises the lead role of Bruce Wayne/Batman, with a returning cast of allies: Michael Caine as Alfred Pennyworth, Gary Oldman as James Gordon, and Morgan Freeman as Lucius Fox. The film introduces Selina Kyle (Anne Hathaway), a sly, morally ambiguous cat burglar, and Bane (Tom Hardy), a revolutionary bent on destroying Gotham City who forces an older Bruce Wayne to come out of retirement and become Batman again.
+                        p
+                            | The Dark Knight Rises is a 2012 British-American superhero film directed by Christopher Nolan, who co-wrote the screenplay with his brother Jonathan Nolan, and the story with David S. Goyer. Featuring the DC Comics character Batman, the film is the final installment in Nolan's Batman film trilogy, and the sequel to Batman Begins (2005) and The Dark Knight (2008). Christian Bale reprises the lead role of Bruce Wayne/Batman, with a returning cast of allies: Michael Caine as Alfred Pennyworth, Gary Oldman as James Gordon, and Morgan Freeman as Lucius Fox. The film introduces Selina Kyle (Anne Hathaway), a sly, morally ambiguous cat burglar, and Bane (Tom Hardy), a revolutionary bent on destroying Gotham City who forces an older Bruce Wayne to come out of retirement and become Batman again.
                      ul.description__photo
                         - var photo = ['img/photo-3.png','img/photo-4.png','img/photo-5.png','img/photo-6.png']
                         - var photo_num = ['1','2','3','4']
