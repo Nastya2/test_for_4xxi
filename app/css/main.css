@@ -62,7 +62,7 @@ p {
   height: 80px;
 }
 
-/* ------------------ header --------------------- */
+/* ------------------ download --------------------- */
 
 .download {
   background: #37b7ec;
@@ -152,7 +152,7 @@ p {
       transform: rotate(-45deg);
 }
 
-/* ---------------------- */
+/* ------------------- header ------------------------ */
 
 .main-header {
   background: #3c434a;
@@ -443,6 +443,10 @@ p {
 
 .share__item:first-child {
   margin-left: 0;
+}
+
+.share__link {
+  display: block;
 }
 
 /* ------------------ box2 --------------------- */
@@ -1049,6 +1053,28 @@ p {
   }
 }
 
+/* ------------------- tooltip ----------- */
 
+.tooltip {
+  background: #404040;
+  padding: 10px 14px;
+  font-size: 14px;
+  color: #fff;
+  opacity: 0.7;
+  border-radius: 3px;
+  position: fixed;
+}
 
+.tooltip::after {
+  content: '';
+  position: absolute;
+  left: 64px;
+  bottom: -11px;
+  border: 6px solid transparent;
+  border-top: 6px solid #404040;
+}
+
+.hide {
+  display: none;
+}
 

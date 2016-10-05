@@ -8,7 +8,8 @@ html
         title 4xxi
         link(rel='stylesheet'  href='css/normalize.css')
         link(rel='stylesheet'  href='css/font.css')
-        link(rel='stylesheet'  href='css/main.css' )
+        link(rel='stylesheet'  href='css/main.css')
+        script(src="js/main.js" defer)
         
         
     body
@@ -70,7 +71,7 @@ html
                         li.share__item
                             a(href="#").share__link
                                 img(src="img/share.png").share__img
-                        li.share__item
+                        li(data-tooltip="http://cll.io/a6lnu").share__item.target-tooltip
                             a(href="#").share__link
                                 img(src="img/url.png").share__img
              .box.container
@@ -95,7 +96,7 @@ html
                         li.share__item
                             a(href="#").share__link
                                 img(src="img/share.png").share__img
-                        li.share__item
+                        li(data-tooltip="http://cll.io/a6lnu").share__item.target-tooltip
                             a(href="#").share__link
                                 img(src="img/url.png").share__img    
               .box.container
@@ -117,7 +118,7 @@ html
                         li.share__item
                             a(href="#").share__link
                                 img(src="img/share.png").share__img
-                        li.share__item
+                        li(data-tooltip="http://cll.io/a6lnu").share__item.target-tooltip
                             a(href="#").share__link
                                 img(src="img/url.png").share__img         
             .box.container
@@ -156,7 +157,7 @@ html
                         li.share__item
                             a(href="#").share__link
                                 img(src="img/share.png").share__img
-                        li.share__item
+                        li(data-tooltip="http://cll.io/a6lnu").share__item.target-tooltip
                             a(href="#").share__link
                                 img(src="img/url.png").share__img  
             .box.box_protected.container.clearfix
