@@ -5,4 +5,4 @@
 
 gh-pages https://nastya2.github.io/hosting.github.io/4xxi/
 
-Примечание: Не нашла шрифт HelveticaNeue, как  макете
+Примечание: Не нашла шрифт HelveticaNeue, как в макете

@@ -11,8 +11,9 @@ var popup320 = new Popup({
 
 function Tooltip(options) {
     var elem = options.elem;
-    elem.forEach(function(item,i){
-        elem[i].onmouseover = function(event) {
+    elem = [].slice.call(elem);
+    elem.forEach(function(item,i,elem) {
+        item.onmouseover = function(event) {
             var target = event.target;
             while (target != this) {
                 target = target.parentElement;
@@ -20,8 +21,8 @@ function Tooltip(options) {
         render(target);
         };
    });
-    elem.forEach(function(item,i) {
-        elem[i].onmouseout = function() {
+    elem.forEach(function(item,i,elem) {
+        item.onmouseout = function() {
             var tooltip = document.querySelectorAll(".tooltip");
             hide(tooltip);
         };
