@@ -12,8 +12,9 @@ var
     browserSync = require('browser-sync'),
     plumber = require('gulp-plumber'),
     del = require('del'), 
-    imagemin = require('gulp-imagemin'), 
     cache = require('gulp-cache'),
+    pngquant = require('imagemin-pngquant'),
+    imagemin = require('gulp-imagemin'), 
     spritesmith = require("gulp.spritesmith");
     
     
@@ -75,31 +76,40 @@ gulp.task('watch',['css','jade','browser-sync','sprites'],function(){
     gulp.watch('app/js/**/*.js');
     gulp.watch('app/img/sprite/**/*.png')['sprites'];
 });
-/*----------------images------------------*/
-gulp.task('default', () =>
-    gulp.src('app/img/*')
-        .pipe(imagemin())
-        .pipe(gulp.dest('dist/img'))
-);
 
+/*----------------img------------------*/
+gulp.task('img', function() {
+    return gulp.src('app/img/**/*') 
+        .pipe(cache(imagemin({  
+            interlaced: true,
+            progressive: true,
+            svgoPlugins: [{removeViewBox: false}],
+            use: [pngquant()]
+        })))
+        .pipe(gulp.dest('dist/img')); 
+});
 /*----------------in production------------------*/
 gulp.task('clean', function() {
     return del.sync('dist'); // Удаляем папку dist перед сборкой
 });
 
-gulp.task('build', ['clean', 'jade', 'css','imagemin',], function() {
+gulp.task('build', ['clean', 'jade', 'css', 'img'], function() {
 
-    var buildCss = gulp.src('app/post_css/**/*')
+    var buildCss = gulp.src('app/post_css/*')
+    .pipe(gulp.dest('dist/css'))
+    
+    var buildCss2 = gulp.src('app/css/*')
     .pipe(gulp.dest('dist/css'))
 
-    var buildFonts = gulp.src('app/fonts/**/*') 
-    .pipe(gulp.dest('dist/fonts'))
+    var buildFonts = gulp.src('app/font/*') 
+    .pipe(gulp.dest('dist/font'))
 
-    var buildJs = gulp.src('app/js/**/*') 
+    var buildJs = gulp.src('app/js/*') 
     .pipe(gulp.dest('dist/js'))
 
     var buildHtml = gulp.src('app/*.html') 
     .pipe(gulp.dest('dist'));
+    
 
 });
 
