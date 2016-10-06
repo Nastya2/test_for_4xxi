@@ -464,10 +464,6 @@ p {
   }
 }
 
-.new__icon_active {
-  fill: #ed1e23;  
-}
-
 .news__text {
   color: #333;
   font-size: 16px;
@@ -486,6 +482,10 @@ p {
   background: url('../img/list.svg');
   width: 16px;
   height: 14px;
+}
+
+.news__icon.news__icon_active {
+  background: url('../img/list-red.svg');
 }
 
 .news__data {
@@ -1221,7 +1221,7 @@ p {
     z-index: 5;
   }
     
-  .modal320-show {
+  .modal-show {
     display: block;
   }
 }
