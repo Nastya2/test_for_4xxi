@@ -70,10 +70,10 @@ html
                     ul.share
                         li.share__item
                             a(href="#").share__link
-                                img(src="img/share.png").share__img
+                                img(src="img/share.png" alt="share").share__img
                         li(data-tooltip="http://cll.io/a6lnu").share__item.target-tooltip
                             a(href="#").share__link
-                                img(src="img/url.png").share__img
+                                img(src="img/url.png" alt="share").share__img
              .box.container
                 ul.news
                     li.news__item
@@ -95,32 +95,32 @@ html
                     ul.share
                         li.share__item
                             a(href="#").share__link
-                                img(src="img/share.png").share__img
+                                img(src="img/share.png" alt="share").share__img
                         li(data-tooltip="http://cll.io/a6lnu").share__item.target-tooltip
                             a(href="#").share__link
-                                img(src="img/url.png").share__img    
+                                img(src="img/url.png" alt="share").share__img    
               .box.container
                 .media
                     a(href="#").media__link-1.media__link
-                        img(src='img/video.png' class="media__resource")
+                        img(src='img/video.png' class="media__resource" alt="video")
                         span(class="media__icon media__resource-play")
                     a(href="#").media__link-2.media__link
-                        img(src='img/photo-1.png' class="media__resource")
+                        img(src='img/photo-1.png' class="media__resource" alt="photo")
                     a(href="#").media__link-3.media__link
-                        img(src='img/photo-2.png' class="media__resource")
+                        img(src='img/photo-2.png' class="media__resource" alt="photo")
                        
                 .calendar
-                    img(src="img/calendar.svg" scr="calendar").calendar__img
+                    img(src="img/calendar.svg" alt="calendar").calendar__img
                     span.calendar__data Due on Feb 13, 12:42 PM
                 .crumbs.clearfix
                     .time-ago Feb 14
                     ul.share
                         li.share__item
                             a(href="#").share__link
-                                img(src="img/share.png").share__img
+                                img(src="img/share.png" alt="share").share__img
                         li(data-tooltip="http://cll.io/a6lnu").share__item.target-tooltip
                             a(href="#").share__link
-                                img(src="img/url.png").share__img         
+                                img(src="img/url.png" alt="share").share__img         
             .box.container
                 .description
                      .description__text
@@ -128,10 +128,11 @@ html
                             | The Dark Knight Rises is a 2012 British-American superhero film directed by Christopher Nolan, who co-wrote the screenplay with his brother Jonathan Nolan, and the story with David S. Goyer. Featuring the DC Comics character Batman, the film is the final installment in Nolan's Batman film trilogy, and the sequel to Batman Begins (2005) and The Dark Knight (2008). Christian Bale reprises the lead role of Bruce Wayne/Batman, with a returning cast of allies: Michael Caine as Alfred Pennyworth, Gary Oldman as James Gordon, and Morgan Freeman as Lucius Fox. The film introduces Selina Kyle (Anne Hathaway), a sly, morally ambiguous cat burglar, and Bane (Tom Hardy), a revolutionary bent on destroying Gotham City who forces an older Bruce Wayne to come out of retirement and become Batman again.
                      ul.description__photo
                         - var photo = ['img/photo-3.png','img/photo-4.png','img/photo-5.png','img/photo-6.png']
+                        - var alt = ['photo','photo','photo','photo']
                         - var photo_num = ['1','2','3','4']
                         each item, index in photo_num
                             li(class="description__photo-item description__photo-item-" + item)
-                                img(src=photo[index]).description__photo-img
+                                img(src=photo[index] alt=alt[index]).description__photo-img
                  .contact-info.clearfix
                     .map
                         img(src="img/map.png" alt="map").map__img
@@ -144,22 +145,23 @@ html
                 section.dowload
                    ul.download-file
                     - var filePicture = ['img/db.png','img/skydrive.png','img/attach-doc.png']
+                    - var alt = ['file','file','file']
                     - var fileName = ['logo_final.eps','photos_summer.zip','work_…hard.doc']
                         each item, index in fileName
                             li(class="download-file-item")
                                 a(href="#" download).download-file__link
                                     span.download-file__picture
-                                        img(src= filePicture[index]).download-file__img
+                                        img(src= filePicture[index] alt=alt[index]).download-file__img
                                     span.download-file__name= fileName[index]
                    .crumbs.clearfix
                     .time-ago Jan 12
                     ul.share
                         li.share__item
                             a(href="#").share__link
-                                img(src="img/share.png").share__img
+                                img(src="img/share.png" alt="share").share__img
                         li(data-tooltip="http://cll.io/a6lnu").share__item.target-tooltip
                             a(href="#").share__link
-                                img(src="img/url.png").share__img  
+                                img(src="img/url.png" alt="share").share__img  
             .box.box_protected.container.clearfix
                 .angle.angle_protected
                 .time-ago Nov 22
@@ -184,12 +186,19 @@ html
                                 li.footer-social__item
                                     a(href="#" class="footer__social-link footer-social__link_" + item)
                                         .footer-social__icon
-
+        .modalWin320
+            .modalWin320-top
+                .modalWin320__title Share
+                button(type="button" title="закрыть").close-popup320
+            .modalWin320-bottom
+                span.modalWin320__main-link http://cll.io/a6lnu
+                ul.modalWin320__list
+                    - var icons = ['fb', 'tw','vk','in']
+                    each icon in icons
+                        li(class="modalWin320__item")
+                            a(href="#" class="modalWin320__link modalWin320__link_" + icon)
+                                .modalWin320__icon
+      .modal-overlay            
                    
                    
-                   
-                   
-                   
-                   
-            
-            
+                    

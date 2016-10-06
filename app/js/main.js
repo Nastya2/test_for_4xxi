@@ -4,6 +4,13 @@ var tooltipObj = new Tooltip({
   elem: document.querySelectorAll('.target-tooltip')
 });
 
+var popup320 = new Popup320({
+  shareButton: document.querySelector('.share-button'),
+  modal320: document.querySelector('.modalWin320'),
+  modalOverlay: document.querySelector('.modal-overlay'),
+  closeModal320: document.querySelector('.close-popup320')
+});
+
 function Tooltip(options) {
 
     var elem = options.elem;
@@ -56,5 +63,20 @@ function Tooltip(options) {
 
 
 
-
-
+function Popup320(options) {
+    
+   var shareButton = options.shareButton,
+       modal320 = options.modal320,
+       modalOverlay = options.modalOverlay,
+       closeModal320 = options.closeModal320; 
+    
+    shareButton.onclick = function() {
+        modal320.classList.add('modal320-show');
+        modalOverlay.classList.add('modal320-show');
+    }
+    
+    closeModal320.onclick = function() {
+        modal320.classList.remove('modal320-show');
+        modalOverlay.classList.remove('modal320-show'); 
+    }
+}

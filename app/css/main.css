@@ -784,6 +784,10 @@ p {
   height: 20px;
 }
 
+.modalWin320 {
+  display: none;
+}
+
 /* ------------------ adaptive768 ----------------- */ 
 
 @media screen and (min-width: 768px) and (max-width: 959px) {
@@ -832,7 +836,12 @@ p {
   .footer_text {
     margin-right: 154px;      
   }
+    
+  .modalWin320 {
+    display: none;
+  }
 }
+
 
 /* ------------------ adaptive320 ----------------- */ 
 
@@ -1051,6 +1060,174 @@ p {
   .footer-social {
     margin-top: -6px;
   }
+
+  /* ----------------- modalWindow ---------------------- */
+    
+  .modalWin320 {
+    display: none;
+    width: 280px;
+    border-radius: 3px;
+    background: #fff;
+    position: fixed;
+    z-index: 6;
+    top: 180px;
+    left: 50%;
+    margin-left: -140px;
+  }
+
+  .modalWin320-top {
+    background: #fff;   
+  }
+
+  .modalWin320__title {
+    display: inline-block;
+    color: #404143;
+    font-size: 22px;
+    padding-bottom: 16px;
+    padding-top: 18px;
+    margin-left: 110px;
+  }
+
+  .modalWin320-bottom {
+    background: #f0f5fa;
+    padding-top: 21px;
+    padding-bottom: 30px;
+  }
+
+  .modalWin320__main-link {
+    font-size: 20px;
+    color: #fff;
+    background: #37b7ec;
+    text-align: center;
+    width: 151px;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 40px;
+  }
+
+  .modalWin320__list {
+    text-align: center;
+    font-size: 0;
+  }
+
+  .modalWin320__item {
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 20px;
+  }
+
+  .modalWin320__item:first-child {
+    margin-left: 0;
+  }
+
+  .modalWin320__link {
+    display: block;
+    width: 36px;
+    height: 36px;
+    background: #3a589c;
+    border-radius: 50%;
+    position: relative;
+  }
+
+  .modalWin320__link_fb .modalWin320__icon {
+    background-image: url('../img/sprite.png');
+    background-position: -176px 0;
+    width: 8px;
+    height: 16px; 
+  }
+
+  .modalWin320__link_tw .modalWin320__icon {
+    background-image: url('../img/sprite.png');
+    background-position: -90px 0;
+    width: 16px;
+    height: 13px;
+  }
+
+  .modalWin320__link_tw {
+    background: #29a9e1;   
+  }
+
+  .modalWin320__link_vk {
+    background: #5a7ba0;   
+  }
+
+  .modalWin320__link_in {
+    background: #007bb8;   
+  }
+
+  .modalWin320__link_vk .modalWin320__icon {
+    background-image: url('../img/sprite.png');
+    background-position: 0 0;
+    width: 20px;
+    height: 11px;
+  }
+
+  .modalWin320__link_in .modalWin320__icon {
+    background-image: url('../img/sprite.png');
+    background-position: 0 -81px;
+    width: 16px;
+    height: 15px;
+  }
+
+  .modalWin320__icon {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    position: absolute;
+  }
+
+  .close-popup320 {
+    border: none;
+    outline: none;
+    font-size: 0;
+    width: 14px;
+    height: 14px;
+    background: transparent;
+    cursor: pointer;
+    float: right;
+    position: relative;
+    margin-top: 14px;
+    margin-right: 13px;
+  }
+
+  .close-popup320::after,
+    .close-popup320::before {
+    position: absolute;
+    content: "";
+    width: 14px;
+    height: 2px;
+    background: #757e87;
+    top: 5px;
+    right: 0;
+  }
+
+  .close-popup320::before {
+    -ms-transform: rotate(45deg);
+        transform: rotate(45deg);
+  }
+
+  .close-popup320::after {
+    -ms-transform: rotate(-45deg);
+        transform: rotate(-45deg);
+  }
+
+  .modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    opacity: 0.5;
+    display: none;
+    z-index: 5;
+  }
+    
+  .modal320-show {
+    display: block;
+  }
 }
 
 /* ------------------- tooltip ----------- */
@@ -1077,4 +1254,9 @@ p {
 .hide {
   display: none;
 }
+
+
+
+
+
 
