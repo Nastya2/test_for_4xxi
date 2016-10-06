@@ -298,7 +298,7 @@ p {
   font-size: 20px;
 }
 
-.title {
+.title.title-320 {
   display: none;
 }
 
@@ -910,7 +910,11 @@ p {
     margin-top: 0;
   }
     
-  .title-320 {
+  .title {
+    display: none;
+  }
+    
+  .title.title-320 {
     display: block;
     font-size: 18px;
     margin-top: 20px;
