@@ -6,7 +6,7 @@ var
 	autoprefixer = require('autoprefixer'),
     nested = require('postcss-nested'),
     stylelint = require('stylelint'),
-    config = require('stylelint-config-standard'),
+    config = require('./stylelintrc.js'),
     reporter = require('postcss-browser-reporter'),
     jade = require('gulp-jade'),
     browserSync = require('browser-sync'),
