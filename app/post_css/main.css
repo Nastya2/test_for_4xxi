@@ -246,32 +246,40 @@ p {
   display: block; 
 }
 
-.socials__link_fb .socials__icon {
-  background-image: url('../img/sprite.png');
-  background-position: -176px 0;
-  width: 8px;
-  height: 16px; 
+.socials__link_fb {
+  .socials__icon {
+    background-image: url('../img/sprite.png');
+    background-position: -176px 0;
+    width: 8px;
+    height: 16px; 
+  }
 }
 
-.socials__link_tw .socials__icon {
-  background-image: url('../img/sprite.png');
-  background-position: -90px 0;
-  width: 16px;
-  height: 13px;
+.socials__link_tw {
+  .socials__icon {
+    background-image: url('../img/sprite.png');
+    background-position: -90px 0;
+    width: 16px;
+    height: 13px;
+  }
 }
 
-.socials__link_vk .socials__icon {
-  background-image: url('../img/sprite.png');
-  background-position: 0 0;
-  width: 20px;
-  height: 11px;
+.socials__link_vk {
+  .socials__icon {
+    background-image: url('../img/sprite.png');
+    background-position: 0 0;
+    width: 20px;
+    height: 11px;
+  }
 }
 
-.socials__link_in .socials__icon {
-  background-image: url('../img/sprite.png');
-  background-position: 0 -81px;
-  width: 16px;
-  height: 15px;
+.socials__link_in {
+  .socials__icon {
+    background-image: url('../img/sprite.png');
+    background-position: 0 -81px;
+    width: 16px;
+    height: 15px;
+  }
 }
 
 .its-link {
@@ -567,10 +575,15 @@ p {
 /* ------------------ box4 --------------------- */
 
 .description__text {
-  font-size: 16px;
-  line-height: 1.63;
-  color: #494949;
   margin-bottom: 20px;
+}
+
+.description__text {
+  p {
+    font-size: 16px;
+    line-height: 1.63;
+    color: #494949;
+  }
 }
 
 .description__photo {
@@ -1131,18 +1144,22 @@ p {
     position: relative;
   }
 
-  .modalWin320__link_fb .modalWin320__icon {
-    background-image: url('../img/sprite.png');
-    background-position: -176px 0;
-    width: 8px;
-    height: 16px; 
+  .modalWin320__link_fb {
+    .modalWin320__icon {
+      background-image: url('../img/sprite.png');
+      background-position: -176px 0;
+      width: 8px;
+      height: 16px; 
+    }
   }
-
-  .modalWin320__link_tw .modalWin320__icon {
-    background-image: url('../img/sprite.png');
-    background-position: -90px 0;
-    width: 16px;
-    height: 13px;
+    
+  .modalWin320__link_tw {
+    .modalWin320__icon {
+      background-image: url('../img/sprite.png');
+      background-position: -90px 0;
+      width: 16px;
+      height: 13px;
+    }
   }
 
   .modalWin320__link_tw {
@@ -1157,18 +1174,22 @@ p {
     background: #007bb8;   
   }
 
-  .modalWin320__link_vk .modalWin320__icon {
-    background-image: url('../img/sprite.png');
-    background-position: 0 0;
-    width: 20px;
-    height: 11px;
+  .modalWin320__link_vk {
+    .modalWin320__icon {
+      background-image: url('../img/sprite.png');
+      background-position: 0 0;
+      width: 20px;
+      height: 11px;
+    }
   }
 
-  .modalWin320__link_in .modalWin320__icon {
-    background-image: url('../img/sprite.png');
-    background-position: 0 -81px;
-    width: 16px;
-    height: 15px;
+  .modalWin320__link_in {
+    .modalWin320__icon {
+      background-image: url('../img/sprite.png');
+      background-position: 0 -81px;
+      width: 16px;
+      height: 15px;
+    }
   }
 
   .modalWin320__icon {

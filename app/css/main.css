@@ -252,7 +252,7 @@ p {
   background-image: url('../img/sprite.png');
   background-position: -176px 0;
   width: 8px;
-  height: 16px; 
+  height: 16px;
 }
 
 .socials__link_tw .socials__icon {
@@ -569,10 +569,13 @@ p {
 /* ------------------ box4 --------------------- */
 
 .description__text {
+  margin-bottom: 20px;
+}
+
+.description__text p {
   font-size: 16px;
   line-height: 1.63;
   color: #494949;
-  margin-bottom: 20px;
 }
 
 .description__photo {
@@ -1137,9 +1140,9 @@ p {
     background-image: url('../img/sprite.png');
     background-position: -176px 0;
     width: 8px;
-    height: 16px; 
+    height: 16px;
   }
-
+    
   .modalWin320__link_tw .modalWin320__icon {
     background-image: url('../img/sprite.png');
     background-position: -90px 0;
