@@ -1,6 +1,6 @@
 doctype html
 
-html(lang="ru")
+html(lang="en")
     head
         meta(charset='UTF-8')
         meta(http-equiv='X-UA-Compatible', content="IE=edge")
@@ -15,7 +15,7 @@ html(lang="ru")
         
     body
         .wrapper
-            section.download
+            .download
                 .container.clearfix
                     .downloadInfo
                         .logo-headerTop
@@ -84,13 +84,14 @@ html(lang="ru")
                         ul.news__data.clearfix
                             li.news__data-item.news__data-nubmer 12 items
                             li.news__data-item.news__data-time 7h ago
-                    li.news__item.clearfix
+                    li.news__item
                         a(href="#").news__link
                             span.news__icon
                             span.news__text The longest title in the world
-                        ul.news__data
+                        ul.news__data.clearfix
                             li.news__data-item.news__data-nubmer 3 items
                             li.news__data-item.news__data-time Mar 13
+                    
                 .crumbs.clearfix
                     .time-ago 2h ago
                     ul.share
@@ -143,7 +144,7 @@ html(lang="ru")
                             span.adress__data-part 411 Pearl St, NY 10038
                             span.adress__data-part United States of America
                         a(href="#").adress__onMap Watch location on Google Maps
-                section.dowload
+                .section-download-file
                    ul.download-file
                     - var filePicture = ['img/db.png','img/skydrive.png','img/attach-doc.png']
                     - var alt = ['file','file','file']

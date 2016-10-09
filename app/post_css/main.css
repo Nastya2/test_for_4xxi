@@ -553,10 +553,7 @@ p {
   font-size: 0;
   padding-bottom: 30px;
   border-bottom: 0.5px solid #bdbdbd;
-}
-
-.calendar {
-  margin-top: 17px;
+  margin-bottom: 17px;
 }
 
 .calendar__img {
@@ -573,6 +570,10 @@ p {
 }
 
 /* ------------------ box4 --------------------- */
+
+.description {
+  margin-bottom: 25px;  
+}
 
 .description__text {
   margin-bottom: 20px;
@@ -596,7 +597,6 @@ p {
   display: inline-block;
   vertical-align: top;
   margin-right: 12px;
-  margin-top: 12px;
 
   &:last-child {
     margin-right: 0;
@@ -608,10 +608,10 @@ p {
 }
 
 .contact-info {
-  padding-top: 25px;
   padding-bottom: 25px;
   border-bottom: 0.5px solid #bdbdbd;
   font-size: 16px;
+  margin-bottom: 25px;
 }
 
 .map {
@@ -656,7 +656,6 @@ p {
 }
 
 .download-file {
-  margin-top: 25px;
   font-size: 0;
 }
 
