@@ -22,7 +22,7 @@ var
 
 gulp.task('css', function () {
     var processors = [
-        stylelint({config}),
+        stylelint(config),
         autoprefixer({browsers: ['last 3 version']}),
         nested,
         
